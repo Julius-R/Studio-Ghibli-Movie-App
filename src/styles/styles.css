@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input, select, button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  padding: 80px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(1, 1, 1, 0.3);
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-backdrop-filter: blur(8px) opacity(100%);
+          backdrop-filter: blur(8px) opacity(100%);
+}
+
+.modal .card {
+  margin: auto;
+  border-radius: 8px;
+  width: 300px;
+  background: #fff;
+  position: relative;
+}
+
+.modal .card__header {
+  height: 100px;
+  border-radius: 8px 8px 0 0;
+  background: radial-gradient(circle 992px at 7.8% 77.5%, #f6ff60 0%, #28d9fc 90%);
+  padding: 20px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.modal .card__header .close-btn {
+  color: #111;
+  cursor: pointer;
+}
+
+.modal .card__image {
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  top: 50px;
+  left: 110px;
+}
+
+.modal .card__image img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.modal .card .profile {
+  text-align: center;
+  position: relative;
+  padding: 50px 20px 20px;
+}
+
+.modal .card .profile__name {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.modal .card .profile hr {
+  margin: 10px 0 30px;
+}
+
+.modal .card .profile__occupation {
+  background: #ffffff;
+  position: absolute;
+  top: 95px;
+  font-weight: 400;
+  font-size: 1em;
+  left: 40px;
+  padding: 0 5px;
+}
+
+.modal .card .profile__bio {
+  text-transform: italicize;
+  font-size: .9em;
+  margin-bottom: 20px;
+}
+
+.modal .card .profile__social {
+  font-size: .9em;
+}
+/*# sourceMappingURL=styles.css.map */
