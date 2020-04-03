@@ -2,3 +2,21 @@
     padding: $big-gutter * 2 0
     width: 90%
     margin: 0 auto
+.movies
+    .movie
+        margin: $gutter - .25rem
+        background: $chalk
+        box-shadow: 2px 4px 25px rgba(0, 0, 0, .1)
+        border-radius: 12px
+        overflow: hidden
+        transition: all .2s linear
+        &:hover
+            box-shadow: 2px 8px 45px rgba(0, 0, 0, .15)
+            transform: translate3D(0, -2px, 0)
+        .title
+            text-align: center
+            font-size: $gutter - .25rem
+            padding: $gutter
+            font-weight: $weight-thin
+            background-image: $gradient-1
+            color: $chalk
