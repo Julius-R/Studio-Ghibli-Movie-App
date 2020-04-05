@@ -7,7 +7,11 @@ export default function Movie({ movie }) {
 				<h1>{movie.title}</h1>
 			</header>
 			<section className="content">
-				<img src={movie.poster_path} alt="" />
+				<p>Director: {movie.director}</p>
+				<p>Producer: {movie.producer}</p>
+				<p>Released: {movie.release_date}</p>
+				<p>RT Score: {movie.rt_score}</p>
+				<p>{movie.description}</p>
 			</section>
 		</article>
 	);
