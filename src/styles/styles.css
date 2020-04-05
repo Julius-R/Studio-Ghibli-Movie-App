@@ -50,6 +50,22 @@ a {
   text-align: center;
 }
 
+.movieList {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.movieList p {
+  text-align: center;
+}
+
+.movies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
 .movies .movie {
   margin: 1.25rem;
   background: #fff;
@@ -59,6 +75,18 @@ a {
   overflow: hidden;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+.movies .movie:nth-child(2n) .title {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.movies .movie:nth-child(4n) .title {
+  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.movies .movie:nth-child(5n) .title {
+  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
 
 .movies .movie:hover {
@@ -83,5 +111,20 @@ a {
 
 .movies .movie .content p {
   padding: 0.3rem 0;
+  text-align: left;
+}
+
+@media screen and (min-width: 900px) {
+  .movies {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .movies {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

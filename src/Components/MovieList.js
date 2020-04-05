@@ -10,14 +10,14 @@ export default class MovieList extends Component {
 	};
 	filterMovies(filterVal) {
 		let term = filterVal.target.value;
+
 		console.log(term);
 		if (term !== 'null') {
-			this.setState({
-				filteredMovies: this.state.data.filter(movie => {
-					if (movie.producer === term) {
-						return movie;
-					}
-				})
+			let results = this.state.data.filter(movie => {
+				return movie.producer === term;
+			});
+			return this.setState({
+				filteredMovies: results
 			});
 		} else {
 			this.setState({
@@ -50,7 +50,7 @@ export default class MovieList extends Component {
 	}
 	render() {
 		return (
-			<>
+			<section className="movieList">
 				<section className="filter">
 					<select onChange={this.filterMovies.bind(this)}>
 						<option value="null">Filter By Produdcer</option>
@@ -63,13 +63,13 @@ export default class MovieList extends Component {
 						})}
 					</select>
 				</section>
+				<p>Movies List</p>
 				<section className="movies">
-					<p>Movie List</p>
 					{this.state.filteredMovies.map(movie => {
 						return <Movie key={movie.id} movie={movie} />;
 					})}
 				</section>
-			</>
+			</section>
 		);
 	}
 }
